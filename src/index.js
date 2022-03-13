@@ -205,7 +205,7 @@ export async function showLocation(options) {
       }
       break;
     case 'waze':
-      url = `${prefixes.waze}?ll=${latlng}&navigate=yes`;
+      url = `${prefixes.waze}?ll=${latlng}&navigate=${options.directionsMode ? 'yes' : 'no'}`;
       if (title) {
         url += `&q=${encodedTitle}`;
       }
